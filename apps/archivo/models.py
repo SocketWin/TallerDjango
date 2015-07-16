@@ -17,7 +17,7 @@ class Producto(models.Model):
     porcent_utilidad = models.DecimalField(max_digits=4, decimal_places=2, null=True, blank=True)
     stock = models.IntegerField(editable=False, null=True, blank=True)
 
-class Clientes(models.Model):
+class Cliente(models.Model):
     codigo = models.AutoField(primary_key=True)
     nombres = models.CharField(max_length=50)
     apellidos = models.CharField(max_length=50)

@@ -1,5 +1,5 @@
 from django.db import models
-from apps.archivo.models import Clientes, Producto
+from apps.archivo.models import Cliente, Producto
 from django.contrib.auth.models import User
 
 # Aquí se escribiran los modelos: Facturacion
@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Factura(models.Model):
     codigo = models.AutoField(primary_key=True)
     fecha = models.DateTimeField(auto_now_add=True)
-    cliente = models.ForeignKey(Clientes)
+    cliente = models.ForeignKey(Cliente)
     vendedor = models.ForeignKey(User)
     subtotal = models.DecimalField(max_digits=7, decimal_places=2)
     iva = models.DecimalField(max_digits=7, decimal_places=2)
